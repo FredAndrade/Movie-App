@@ -3,7 +3,6 @@ package com.example.movieapptmdb.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class MovieModel implements Parcelable {
@@ -15,10 +14,10 @@ public class MovieModel implements Parcelable {
     private float vote_average;
 
     @SerializedName("overview")
-    private String movie_overview;
+    private final String movie_overview;
 
 
-    private int vote_count;
+    private final int vote_count;
 
 
     public MovieModel(String title, String poster_path, String release_date, int movie_id, float vote_average, String movie_overview, int vote_count) {
@@ -61,9 +60,6 @@ public class MovieModel implements Parcelable {
         return poster_path;
     }
 
-    public String getRelease_date() {
-        return release_date;
-    }
 
     public float getVote_average() {
         return vote_average;
@@ -71,14 +67,6 @@ public class MovieModel implements Parcelable {
 
     public String getMovie_overview() {
         return movie_overview;
-    }
-
-    public int getMovie_id() {
-        return movie_id;
-    }
-
-    public int getVote_count(){
-        return vote_count;
     }
 
 

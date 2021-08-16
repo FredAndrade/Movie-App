@@ -6,6 +6,7 @@ import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -42,6 +43,8 @@ public class MovieListActivity extends AppCompatActivity implements OnMovieListe
 
     private MovieListViewModel movieListViewModel;
 
+    boolean isPopular = true;
+
 
 
     @Override
@@ -57,8 +60,28 @@ public class MovieListActivity extends AppCompatActivity implements OnMovieListe
 
         movieListViewModel = new ViewModelProvider(this).get(MovieListViewModel.class);
 
+        movieListViewModel.searchMovieApiPopular(1);
+
         ConfigureRecyclerView();
         ObserveChange();
+        ObservePopularMovies();
+
+
+    }
+    private void ObservePopularMovies(){
+
+        movieListViewModel.getPopular().observe(this, new Observer<List<MovieModel>>() {
+            @Override
+            public void onChanged(List<MovieModel> movieModels) {
+                if (movieModels != null){
+                    for (MovieModel movieModel: movieModels){
+
+                        movieRecyclerViewAdapter.setmMovies(movieModels);
+                    }
+                }
+
+            }
+        });
 
     }
 
@@ -84,7 +107,7 @@ public class MovieListActivity extends AppCompatActivity implements OnMovieListe
         movieRecyclerViewAdapter = new MovieRecyclerView(this);
 
         recyclerView.setAdapter(movieRecyclerViewAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
@@ -130,6 +153,14 @@ public class MovieListActivity extends AppCompatActivity implements OnMovieListe
             @Override
             public boolean onQueryTextChange(String newText) {
                 return false;
+            }
+        });
+
+
+        searchView.setOnSearchClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isPopular = false;
             }
         });
 
