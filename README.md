@@ -2,7 +2,7 @@
 Aplicativo de streaming básico utilizando a API The Movie DB (https://www.themoviedb.org/documentation/api) utilizando Java no Android Studio
 Utilizado a arquitetura MVVM 
 
-![Screenshot_1](https://user-images.githubusercontent.com/59840894/129623840-81a16811-20cc-4ee1-a288-4881e77291ca.png)
+![Screenshot_7](https://user-images.githubusercontent.com/59840894/129624649-0cb8450e-31b7-4ae7-b210-4dfb78cf62ce.png)
 ![Screenshot_6](https://user-images.githubusercontent.com/59840894/129624449-aaf68add-6333-4651-b1bb-21815cbe9147.png)
 
 
