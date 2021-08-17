@@ -11,9 +11,9 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_height="?attr/actionBarSize"
         android:background="#D93A3A3A"
         android:theme="@style/ThemeOverlay.AppCompat.Light"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,11 @@
             android:id="@+id/search_view"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:queryHint="Pesquise seu filme aqui" />
+            app:theme="@style/AppSearchView"
+            app:queryHint="Pesquise seu filme aqui"
+            android:textColorHint="#A3A3A3"
+            app:closeIcon="@drawable/ic_baseline_close_24"
+            app:searchHintIcon="@drawable/ic_baseline_search_icon"/>
 
     </androidx.appcompat.widget.Toolbar>
 

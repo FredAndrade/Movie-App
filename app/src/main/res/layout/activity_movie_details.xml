@@ -8,68 +8,71 @@
     tools:context=".MovieDetails">
 
 
-        <ImageView
-            android:id="@+id/imageView_details"
-            android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/imageView_details"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadowbcg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView_title_dt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_details" />
+
+        <RatingBar
+            android:id="@+id/ratingBar_details"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+
+            android:numStars="5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_title_dt" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView_desc_details"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/shadowbcg"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView_details"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="5dp"
+            android:shadowColor="#000000"
+            android:shadowRadius="3"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar_details" />
 
-
-            <TextView
-                android:id="@+id/textView_title_dt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="TextView"
-                android:textColor="@color/white"
-                android:textSize="34sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.052"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView_details" />
-
-            <RatingBar
-                android:id="@+id/ratingBar_details"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
-
-                android:numStars="5"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_title_dt" />
-
-            <TextView
-                android:id="@+id/textView_desc_details"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginBottom="5dp"
-                android:shadowColor="#000000"
-                android:shadowRadius="3"
-                android:text="TextView"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.044"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ratingBar_details" />
-
-        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
