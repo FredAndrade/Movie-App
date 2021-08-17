@@ -3,6 +3,7 @@ Aplicativo de streaming básico utilizando a API The Movie DB (https://www.themo
 
 ![Screenshot_7](https://user-images.githubusercontent.com/59840894/129624649-0cb8450e-31b7-4ae7-b210-4dfb78cf62ce.png)
 ![Screenshot_6](https://user-images.githubusercontent.com/59840894/129624449-aaf68add-6333-4651-b1bb-21815cbe9147.png)
+![Screenshot_3](https://user-images.githubusercontent.com/59840894/129658904-f83f3b3a-c2a5-418c-968f-e021fe6a44eb.png)
 
 
 Conta com a presença de uma página inicial com os filmes populares no momento segundo a API, uma ferramenta de pesquisa capaz de procurar qualquer filme presente em sua database, informação da votação de qualidade dos filmes, e ao clicar no banner, a sinopse presente do filme.
