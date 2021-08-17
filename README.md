@@ -1,5 +1,5 @@
 # Movie-App
-Aplicativo de streaming básico utilizando a API The Movie DB (https://www.themoviedb.org/documentation/api) utilizando Java no Android Studio
+Aplicativo de streaming básico utilizando a API The Movie DB (https://www.themoviedb.org/documentation/api) em Java
 
 ![Screenshot_7](https://user-images.githubusercontent.com/59840894/129624649-0cb8450e-31b7-4ae7-b210-4dfb78cf62ce.png)
 ![Screenshot_6](https://user-images.githubusercontent.com/59840894/129624449-aaf68add-6333-4651-b1bb-21815cbe9147.png)
